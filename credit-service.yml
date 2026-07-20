@@ -1,0 +1,21 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: credit-service
+
+  mongodb:
+    uri: mongodb://localhost:27017/credit_db
+
+customer-service:
+  base-url: http://localhost:8080
+
+logging:
+  level:
+    root: INFO
+    com.bootcamp.credit_service: DEBUG
+    org.springframework.data.mongodb.core.ReactiveMongoTemplate: INFO
+    org.springframework.web.reactive.function.client: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"

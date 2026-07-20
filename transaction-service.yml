@@ -1,0 +1,25 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: transaction-service
+
+  mongodb:
+    uri: mongodb://localhost:27017/transaction_db
+
+account-service:
+  base-url: http://localhost:8081
+
+credit-service:
+  base-url: http://localhost:8082
+
+logging:
+  level:
+    root: INFO
+    com.bootcamp.transaction_service: DEBUG
+    com.bootcamp.account_service: DEBUG
+    org.springframework.data.mongodb.core.ReactiveMongoTemplate: INFO
+    org.springframework.web.reactive.function.client: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
