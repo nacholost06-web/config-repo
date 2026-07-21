@@ -6,7 +6,7 @@ spring:
     name: customer-service
 
   mongodb:
-    uri: mongodb://localhost:27017/customer_db
+    uri: ${MONGODB_URI:mongodb://localhost:27017/customer_db}
   
 logging:
   level:
