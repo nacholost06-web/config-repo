@@ -6,10 +6,10 @@ spring:
     name: credit-service
 
   mongodb:
-    uri: mongodb://localhost:27017/credit_db
+    uri: ${MONGODB_URI:mongodb://localhost:27017/credit_db}
 
 customer-service:
-  base-url: http://localhost:8080
+  base-url: ${CUSTOMER_SERVICE_URL:http://localhost:8080}
 
 logging:
   level:
